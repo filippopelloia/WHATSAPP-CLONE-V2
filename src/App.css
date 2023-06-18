@@ -1,0 +1,50 @@
+*{
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: content-box;
+}
+
+body{
+  background-color: #262626;
+  position: relative;
+  z-index: 1;
+  height: 100vh;
+}
+
+.navbar{
+  height: 7.5vh;
+  width: 100%;
+  background-color: lightgray;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+}
+
+.container{
+  padding: 0 22.5px;
+}
+
+.section{
+  height: auto;
+  background-color: aqua;
+  width: 100%;
+  margin: 20px 0;
+}
+
+.message{
+  color: #fff;
+  padding: 10px 12px;
+  background-color: orange;
+  width: fit-content;
+  border-radius: 7.5px;
+  /* margin: 20px 25px; */
+}
+
+.right-side{
+  /* float: right; */
+  display: flex;
+  justify-content: end;
+}
