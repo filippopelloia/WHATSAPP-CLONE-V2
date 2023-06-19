@@ -5,6 +5,8 @@ import DataChat3 from '../DataChat3.jsx'
 import Topbar from '../components/Topbar.jsx'
 import Bottombar from '../components/Bottombar.jsx'
 
+import user2 from '../assets/user2.jpg';
+
 export default function Simona() {
 
 
@@ -97,7 +99,7 @@ export default function Simona() {
   return (
       <>
         <div className='chat-section'>
-            <Topbar/>
+            <Topbar image={user2}/>
                 <div className='section'>
                     <div className='message'>Hai visto il film Dune? Quello del 2021.</div>
                 </div>

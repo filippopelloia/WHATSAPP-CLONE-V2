@@ -5,6 +5,8 @@ import DataChat5 from '../DataChat5.jsx'
 import Topbar from '../components/Topbar.jsx'
 import Bottombar from '../components/Bottombar.jsx'
 
+import user7 from '../assets/user7.jpg';
+
 export default function Giancarlo() {
 
 
@@ -97,7 +99,7 @@ export default function Giancarlo() {
   return (
       <>
         <div className='chat-section'>
-            <Topbar/>
+            <Topbar image={user7}/>
                 <div className='section'>
                     <div className='message'>Ho fame.</div>
                 </div>

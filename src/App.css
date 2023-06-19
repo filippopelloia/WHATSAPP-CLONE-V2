@@ -31,26 +31,40 @@ p{
   gap: 15px;
 }
 
-.image-user-sidebar{
+.image-user-sidebar > img{
+  display: block;
+  width: 100%;
+  border-radius: 50%;
   height: 6vh;
   width: 6vh;
-  background-color: purple;
-  border-radius: 50%;
+  object-fit: cover;
 }
 
-.image-user{
+/* .image-user{
   width: 4vh;
   cursor: pointer;
   height: 4vh;
   background-color: aqua;
   border-radius: 50%;
-}
+} */
 
-.image-user{
+/* .image-user > img{
+  display: block;
+  width: 100%;
+  border-radius: 50%;
+  height: 4vh;
+  width: 4vh;
+  object-fit: cover;
+  cursor: pointer;
+} */
+
+
+
+/* .image-user{
   background-color: aqua;
-}
+} */
 
-.image-profile > img{
+.image-profile > img, .image-user > img{
   display: block;
   width: 100%;
   border-radius: 50%;
@@ -220,4 +234,28 @@ svg{
   justify-content: center;
   align-items: center;
   gap: 10px;
+}
+
+.contacts{
+  overflow-y: auto;
+  height: 66.5vh;
+}
+
+
+/* ======SCROLLBAR====== */
+
+::-webkit-scrollbar {
+  width: 8px; /* Larghezza della scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Colore di sfondo della traccia */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888; /* Colore del pollice (la parte mobile) */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Colore del pollice durante l'hover */
 }

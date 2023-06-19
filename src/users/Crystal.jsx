@@ -5,6 +5,8 @@ import DataChat8 from '../DataChat8.jsx'
 import Topbar from '../components/Topbar.jsx'
 import Bottombar from '../components/Bottombar.jsx'
 
+import user4 from '../assets/user4.jpg';
+
 export default function Crystal() {
 
 
@@ -97,7 +99,7 @@ export default function Crystal() {
   return (
       <>
         <div className='chat-section'>
-            <Topbar/>
+            <Topbar image={user4} />
                 <div className='section'>
                     <div className='message'>Ma perchè hanno aumentato il prezzo di Netflix?</div>
                 </div>

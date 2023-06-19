@@ -5,6 +5,8 @@ import DataChat2 from '../DataChat2.jsx'
 import Topbar from '../components/Topbar.jsx'
 import Bottombar from '../components/Bottombar.jsx'
 
+import user1 from '../assets/user1.jpg';
+
 export default function Giada() {
 
 
@@ -97,7 +99,7 @@ export default function Giada() {
   return (
       <>
         <div className='chat-section'>
-            <Topbar/>
+            <Topbar image={user1}/>
                 <div className='section'>
                     <div className='message'>Ciao Filippo, sei in zona Treviso per caso?</div>
                 </div>

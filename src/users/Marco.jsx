@@ -5,6 +5,8 @@ import DataChat2 from '../DataChat2.jsx'
 import Topbar from '../components/Topbar.jsx'
 import Bottombar from '../components/Bottombar.jsx'
 
+import user5 from '../assets/user5.jpg';
+
 export default function Marco() {
 
 
@@ -97,7 +99,7 @@ export default function Marco() {
   return (
       <>
         <div className='chat-section'>
-            <Topbar/>
+            <Topbar image={user5}/>
                 <div className='section'>
                     <div className='message'>Hey, ti ricordi di me? Sono Marco!</div>
                 </div>
@@ -108,6 +110,7 @@ export default function Marco() {
 
               <Bottombar salva={() => saveInMemory()} 
                       setText={(e) => setText(e.target.value)}
+                         text={text}
               />
 
         </div>

@@ -4,7 +4,9 @@ export default function CardUser(props) {
   return (
     <div className='card-user'>
         <div>
-            <div className='image-user-sidebar'></div>
+            <div className='image-user-sidebar'>
+              <img src={props.image} alt="image profile"/>
+            </div>
             <div className='info'>
                 <h3>{props.name}</h3>
                 <p>{props.textMessage}</p>

@@ -5,6 +5,8 @@ import DataChat4 from '../DataChat4.jsx'
 import Topbar from '../components/Topbar.jsx'
 import Bottombar from '../components/Bottombar.jsx'
 
+import user6 from '../assets/user6.jpg';
+
 export default function Luigi() {
 
 
@@ -97,7 +99,7 @@ export default function Luigi() {
   return (
       <>
         <div className='chat-section'>
-            <Topbar/>
+            <Topbar image={user6}/>
                 <div className='section'>
                     <div className='message'>Vieni con me in Portogallo a Novembre?</div>
                 </div>

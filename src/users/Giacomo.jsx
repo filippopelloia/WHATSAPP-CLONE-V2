@@ -5,6 +5,8 @@ import DataChat7 from '../DataChat7.jsx'
 import Topbar from '../components/Topbar.jsx'
 import Bottombar from '../components/Bottombar.jsx'
 
+import user8 from '../assets/user8.jpg';
+
 export default function Giacomo() {
 
 
@@ -97,7 +99,7 @@ export default function Giacomo() {
   return (
       <>
         <div className='chat-section'>
-            <Topbar/>
+            <Topbar image={user8}/>
                 <div className='section'>
                     <div className='message'>Ho trovato il lavoro che sognavo!!</div>
                 </div>

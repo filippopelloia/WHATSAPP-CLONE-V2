@@ -5,6 +5,8 @@ import DataChat6 from '../DataChat6.jsx'
 import Topbar from '../components/Topbar.jsx'
 import Bottombar from '../components/Bottombar.jsx'
 
+import user3 from '../assets/user3.jpg';
+
 export default function Silvana() {
 
 
@@ -97,7 +99,7 @@ export default function Silvana() {
   return (
       <>
         <div className='chat-section'>
-            <Topbar/>
+            <Topbar image={user3}/>
                 <div className='section'>
                     <div className='message'>Mi sa che non ci vedremo domani...</div>
                 </div>
