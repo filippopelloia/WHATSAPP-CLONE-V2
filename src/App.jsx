@@ -23,16 +23,12 @@ function App() {
 
   useEffect(() => {
     if(counter === 0){
-
-      setChat([DataChat2[counter]])
-
+      setChat(prevChat => [DataChat2[counter]])
     }else if(counter === 1 || counter === 3){
-
-      setChat(prevCount => [...prevCount, DataChat2[counter]])
+      setChat(prevChat => [...prevChat, DataChat2[counter]])
       // setChat(prevChat => [{...prevChat[counter], testo: text}, ...prevChat.slice(1)])
       // setChat(prevChat => [...prevChat, DataChat[counter]])
       // setCounter(prevCounter => prevCounter + 1)
-
     }
   }, [counter])
 
@@ -87,30 +83,22 @@ function App() {
 
 
   const showChat = chat.map(item => {
+    
+    const messageClass = counter === 1 ||  counter === 3 ? 'section' : 'section right-side';
+
     return <>
-                         {/* <div className='section right-side'>
-                           <div key={nanoid()} 
-                                id={item.id} 
-                                className='message'>{item?.testo}</div>
-                         </div>
-
-                         {<div className='section'>
-                           <div key={nanoid()} className='message'>{item?.risposta}</div>
-                         </div>} */}
-
-
-
+                    
                         {/*======== TEST ========*/}
 
-                         <div className={counter === 1 || counter === 3 ? 'section' : 'section right-side'}>
+                         <div className={messageClass}>
                            <div key={nanoid()} 
                                 id={item.id} 
-                                className='message'>{counter === 1 || counter === 3 ? item?.risposta : item?.testo}</div>
+                                className='message'>
+                                  {/* {counter === 1 || counter === 3 ? item?.risposta : item?.testo} */}
+                                  {item?.risposta || item?.testo}
+                            </div>
                          </div>
 
-                         {/* {<div className='section'>
-                           <div key={nanoid()} className='message'>{item?.risposta}</div>
-                         </div>} */}
            </>
   })
 
