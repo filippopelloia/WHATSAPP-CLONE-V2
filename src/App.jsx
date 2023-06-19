@@ -19,6 +19,9 @@ function App() {
   //CHAT
   const [chat, setChat] = useState([]);
 
+  //test
+  const [box, setBox] = useState([]);
+
 
 
   useEffect(() => {
@@ -68,6 +71,9 @@ function App() {
       return updatedChat;
     });
     // setChat(prevChat => [{...prevChat[counter], testo: text}, ...prevChat.slice(1)])
+
+
+    //DELAYING
     const delayFunction = () => {
       setCounter(prevCounter => prevCounter + 1);
     }
@@ -77,14 +83,14 @@ function App() {
   }
 
   console.log(chat);
-  console.log(counter);
+  // console.log(counter);
 
 
-
+  useEffect(() => {
 
   const showChat = chat.map(item => {
     
-    const messageClass = counter === 1 ||  counter === 3 ? 'section' : 'section right-side';
+    const messageClass = item.id === 1 ||  item.id === 3 ? 'section' : 'section right-side';
 
     return <>
                     
@@ -98,10 +104,15 @@ function App() {
                                   {item?.risposta || item?.testo}
                             </div>
                          </div>
-
            </>
   })
 
+setBox(showChat);
+
+}, [chat])
+
+
+console.log(box);
 
   //FAI RITARDARE DI QUALCHE SECONDO LE RISPOSTE
 
@@ -141,13 +152,19 @@ function App() {
 
             {/* <h3>{chat[0].answer}</h3> */}
 
-            {showChat}
+            {/* {showChat} */}
 
 {/* 
             {showMessage}
             
+            
 
             {risposta} */}
+
+
+            {box[0]}
+            {box[1]}
+
 
             {/* <div className='section'>
               <div className='message'>Hey Filippo!!</div>
