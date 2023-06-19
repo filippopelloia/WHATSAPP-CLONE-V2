@@ -1,6 +1,7 @@
 import React from 'react'
 
 import TopbarSidebar from './TopbarSidebar.jsx'
+import CardUser from './CardUser.jsx';
 
 import AppsIcon from '@mui/icons-material/Apps';
 import ArchiveIcon from '@mui/icons-material/Archive';
@@ -21,6 +22,8 @@ export default function Sidebar() {
             <ArchiveIcon/>
             <h4>Archive</h4>
         </div>
+
+        <CardUser/>
     </div>
   )
 }

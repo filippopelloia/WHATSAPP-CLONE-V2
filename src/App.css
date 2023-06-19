@@ -6,15 +6,13 @@
   box-sizing: content-box;
 }
 
-/* body{
-  background-color: #262626;
-  position: relative;
-  z-index: 1;
-  height: 100vh;
-  top: 0;
-  left: 0;
-  width: 100%;
-} */
+body{
+  font-family: 'Helvetica', sans-serif;
+}
+
+p{
+  font-size: 0.85em;
+}
 
 .topbar{
   height: 7.5vh;
@@ -31,6 +29,13 @@
   display: flex;
   align-items: center;
   gap: 15px;
+}
+
+.image-user-sidebar{
+  height: 6vh;
+  width: 6vh;
+  background-color: purple;
+  border-radius: 50%;
 }
 
 .image-user, .image-profile{
@@ -103,6 +108,15 @@
   align-items: center;
   padding: 0 20px;
   gap: 17.5px;
+  border-bottom: 1px solid lightgray;
+}
+
+.archive-section > h4{
+  cursor: pointer;
+}
+
+.time{
+  margin-top: -15px;
 }
 
 svg{
@@ -177,4 +191,25 @@ svg{
   height: 100%;
   background-image: url('./assets/background.png');
   background-size: 65vh;
+}
+
+.card-user{
+  cursor: pointer;
+  height: 9vh;
+  background-color: #fff;
+  padding: 0 15px;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid lightgray;
+}
+
+.card-user:hover{
+  background-color: #F1F2F6;
+}
+
+.card-user > div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
 }
