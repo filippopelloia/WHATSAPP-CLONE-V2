@@ -21,36 +21,66 @@ function App() {
   // const [answer, setAnswer] = useState([]);
 
   //CHAT
-  const [chat, setChat] = useState(DataChat);
+  const [chat, setChat] = useState([]);
 
-  // console.log(chat);
-  console.log(text);
+  
+  // console.log(text);
+
+
+  useEffect(() => {
+    if(counter === 0){
+      setChat([DataChat[counter]])
+    }else{
+      setChat(prevChat => [...prevChat, DataChat[counter]])
+    }
+  }, [counter])
 
 
   function saveInMemory(){
-    setChat(prevChat => [{...prevChat[counter], testo: text}, ...prevChat.slice(1)])
+    setChat(prevChat => {
+      const updatedChat = [...prevChat];
+      updatedChat[counter].testo = text;
+      return updatedChat;
+    });
+    // setChat(prevChat => [{...prevChat[counter], testo: text}, ...prevChat.slice(1)])
     setCounter(prevCounter => prevCounter + 1);
   }
 
-
   console.log(chat);
+
+
+  // console.log(chat);
 
   // function saveInMemory(){
   //   setSaveText(prevSaveText => [...prevSaveText, text]);
   //   setCounter(prevCounter => prevCounter + 1);
   // }
 
+  // const showChat =  <>
+  //                       <div className='section right-side'>
+  //                         <div className='message'>{chat?.testo}</div>
+  //                       </div>
+
+  //                       <div className='section'>
+  //                         <div className='message'>{chat?.answer}</div>
+  //                       </div>
+  //                   </>
+
   const showChat = chat.map(item => {
     return <>
-              <div className='section right-side'>
-                <div key={nanoid()} className='message'>{item.testo}</div>
-              </div>
+                         <div className='section right-side'>
+                           <div key={nanoid()} className='message'>{item?.testo}</div>
+                         </div>
 
-              <div className='section'>
-                <div key={nanoid()} className='message'>{item.answer}</div>
-              </div>
+                         <div className='section'>
+                           <div key={nanoid()} className='message'>{item?.answer}</div>
+                         </div>
            </>
   })
+
+
+  //FAI RITARDARE DI QUALCHE SECONDO LE RISPOSTE
+
 
 
 
