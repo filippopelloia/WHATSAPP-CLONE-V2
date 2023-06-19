@@ -2,7 +2,8 @@ import { useState, useEffect } from 'react'
 import './App.css'
 import Navbar from './Navbar.jsx'
 import {nanoid} from 'nanoid'
-import DataChat from './DataChat.jsx'
+// import DataChat from './DataChat.jsx'
+import DataChat2 from './DataChat2.jsx'
 
 function App() {
 
@@ -14,26 +15,54 @@ function App() {
 
   //I TUOI MESSAGGI
   const [text, setText] = useState('');
-  // const [saveText, setSaveText] = useState([]);
-
-  //I MESSAGGI DI RISPOSTA
-  // const [textAnswer, setTextAnswer] = useState('Come va la vita?');
-  // const [answer, setAnswer] = useState([]);
 
   //CHAT
   const [chat, setChat] = useState([]);
 
-  
-  // console.log(text);
 
 
   useEffect(() => {
     if(counter === 0){
-      setChat([DataChat[counter]])
-    }else{
-      setChat(prevChat => [...prevChat, DataChat[counter]])
+
+      setChat([DataChat2[counter]])
+
+    }else if(counter === 1 || counter === 3){
+
+      setChat(prevCount => [...prevCount, DataChat2[counter]])
+      // setChat(prevChat => [{...prevChat[counter], testo: text}, ...prevChat.slice(1)])
+      // setChat(prevChat => [...prevChat, DataChat[counter]])
+      // setCounter(prevCounter => prevCounter + 1)
+
     }
   }, [counter])
+
+
+  //BACKUP
+  // useEffect(() => {
+  //   if(counter === 0){
+  //     setChat([DataChat[counter]])
+  //   }else{
+  //     // setChat(prevChat => [...prevChat, DataChat[counter]])
+  //     console.log('Ciao a tutti quanti!!')
+  //   }
+  // }, [counter])
+
+
+  // useEffect(() => {
+  //   if(chat[counter]?.testo !== ''){
+  //     setChat([DataChat[counter].answer], [DataChat[counter].timeAnswer])
+  //   }else{
+  //     console.log('Ciao a tutti quanti!!')
+  //   }
+  // }, [saveInMemory])
+
+
+  //ACTUALLY
+  // function saveInMemory(){
+  //   setChat(prevChat => {
+
+  //   })
+  // }
 
 
   function saveInMemory(){
@@ -43,38 +72,45 @@ function App() {
       return updatedChat;
     });
     // setChat(prevChat => [{...prevChat[counter], testo: text}, ...prevChat.slice(1)])
-    setCounter(prevCounter => prevCounter + 1);
+    const delayFunction = () => {
+      setCounter(prevCounter => prevCounter + 1);
+    }
+
+    const delay = 3000;
+    setTimeout(delayFunction, delay);
   }
 
   console.log(chat);
+  console.log(counter);
 
 
-  // console.log(chat);
 
-  // function saveInMemory(){
-  //   setSaveText(prevSaveText => [...prevSaveText, text]);
-  //   setCounter(prevCounter => prevCounter + 1);
-  // }
-
-  // const showChat =  <>
-  //                       <div className='section right-side'>
-  //                         <div className='message'>{chat?.testo}</div>
-  //                       </div>
-
-  //                       <div className='section'>
-  //                         <div className='message'>{chat?.answer}</div>
-  //                       </div>
-  //                   </>
 
   const showChat = chat.map(item => {
     return <>
-                         <div className='section right-side'>
-                           <div key={nanoid()} className='message'>{item?.testo}</div>
+                         {/* <div className='section right-side'>
+                           <div key={nanoid()} 
+                                id={item.id} 
+                                className='message'>{item?.testo}</div>
                          </div>
 
-                         <div className='section'>
-                           <div key={nanoid()} className='message'>{item?.answer}</div>
+                         {<div className='section'>
+                           <div key={nanoid()} className='message'>{item?.risposta}</div>
+                         </div>} */}
+
+
+
+                        {/*======== TEST ========*/}
+
+                         <div className={counter === 1 || counter === 3 ? 'section' : 'section right-side'}>
+                           <div key={nanoid()} 
+                                id={item.id} 
+                                className='message'>{counter === 1 || counter === 3 ? item?.risposta : item?.testo}</div>
                          </div>
+
+                         {/* {<div className='section'>
+                           <div key={nanoid()} className='message'>{item?.risposta}</div>
+                         </div>} */}
            </>
   })
 
@@ -112,7 +148,7 @@ function App() {
         {/* <div className='message'>{saveText}</div> */}
         <div className='container'>
             <div className='section'>
-              <div className='message'>Ciao amico miooo!!</div>
+              <div className='message'>Hey, ti ricordi di me? Sono Giulio!</div>
             </div>
 
             {/* <h3>{chat[0].answer}</h3> */}
