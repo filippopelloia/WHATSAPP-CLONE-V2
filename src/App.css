@@ -259,3 +259,21 @@ svg{
 ::-webkit-scrollbar-thumb:hover {
   background: #555; /* Colore del pollice durante l'hover */
 }
+
+/* .bottom-container{
+  position: relative;
+  bottom: 0;
+  right: 0;
+} */
+
+.EmojiPickerReact {
+  height: 44vh!important;
+  width: 67.5vh!important;
+}
+
+.emoji{
+  position: absolute;
+  z-index: 4;
+  bottom: 10vh;
+  margin-left: 15px
+}

@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import { Link } from 'react-router-dom'
 
 import TopbarSidebar from './TopbarSidebar.jsx'
@@ -30,9 +30,30 @@ export default function Sidebar() {
         {id: 7, name: 'Crystal', textMessage: 'Ma perchè hanno aumentato il prezzo di Netflix?', time: '05:59', url:'/crystal', image:`${user4}`},
     ])
 
+    const [results, setResults] = useState(users);
+
+    useEffect(() => {
+        setResults(users);
+    }, [users])
+
+    // console.log(results);
+
+    // const filtro = results.filter(item => {
+    //     item.name.toLowerCase().startsWith()
+    // })
+
+    function searchUser(e){
+        const inputValue = e.target.value
+        const filteredUser = users.filter(user => 
+            user.name.toLowerCase().startsWith(inputValue.toLowerCase())
+        )
+        setResults(filteredUser);
+    }
+
+       console.log(results);
     
 
-    const showUsers = users.map(item => (
+    const showUsers = results.map(item => (
             <Link to={item.url}>
                 <CardUser
                     key={item.id}
@@ -58,6 +79,7 @@ export default function Sidebar() {
             <input type="text" 
                    placeholder="Search a user..."
                    className='input-text-sidebar'
+                   onChange={(e) => searchUser(e)}
             />
             <AppsIcon/>
         </div>
