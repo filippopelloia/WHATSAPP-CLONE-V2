@@ -2,7 +2,6 @@ import { useState, useEffect } from 'react'
 import './App.css'
 import Navbar from './Navbar.jsx'
 import {nanoid} from 'nanoid'
-// import DataChat from './DataChat.jsx'
 import DataChat2 from './DataChat2.jsx'
 
 function App() {
@@ -31,7 +30,9 @@ function App() {
       setChat(prevChat => [...prevChat, DataChat2[counter]])
       // setChat(prevChat => [{...prevChat[counter], testo: text}, ...prevChat.slice(1)])
       // setChat(prevChat => [...prevChat, DataChat[counter]])
-      // setCounter(prevCounter => prevCounter + 1)
+      setCounter(prevCounter => prevCounter + 1)
+    }else{
+      setChat(prevChat => [...prevChat, DataChat2[counter]])
     }
   }, [counter])
 
@@ -80,10 +81,14 @@ function App() {
 
     const delay = 3000;
     setTimeout(delayFunction, delay);
+
+    // if(counter === 1 || counter === 3){
+    //   setCounter(prevCounter => prevCounter + 1);
+    // }
+
   }
 
-  console.log(chat);
-  // console.log(counter);
+
 
 
   useEffect(() => {
@@ -96,14 +101,16 @@ function App() {
                     
                         {/*======== TEST ========*/}
 
+                         {((item.id === 0 || item.id === 2 || item.id === 4) && item.testo === '') ? 
+                         '' 
+                         : 
                          <div className={messageClass}>
-                           <div key={nanoid()} 
+                          <div key={nanoid()} 
                                 id={item.id} 
                                 className='message'>
-                                  {/* {counter === 1 || counter === 3 ? item?.risposta : item?.testo} */}
                                   {item?.risposta || item?.testo}
                             </div>
-                         </div>
+                        </div>}
            </>
   })
 
@@ -113,31 +120,13 @@ setBox(showChat);
 
 
 console.log(box);
-
-  //FAI RITARDARE DI QUALCHE SECONDO LE RISPOSTE
-
-
+console.log(chat);
+console.log(counter);
 
 
 
-  // const showMessage = saveText?.map(item => {
-  //   return <div className='section right-side'>
-  //             <div key={nanoid()} className='message'>{item}</div>
-  //          </div>
-  // })
-
-  // let risposta;
-
-  // if(counter >= 1){
-  // risposta =  (<div className='section'>
-  //                       <div key={nanoid()} className='message'>{textAnswer}</div>
-  //                   </div>)
-  // } else {
-  //   console.log('Nada');
-  // }
 
 
-  // console.log(counter);
 
 
   return (
@@ -164,6 +153,9 @@ console.log(box);
 
             {box[0]}
             {box[1]}
+            {box[2]}
+            {box[3]}
+            {box[4]}
 
 
             {/* <div className='section'>
