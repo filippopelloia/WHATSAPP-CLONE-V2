@@ -6,12 +6,12 @@ export default function CardUser(props) {
         <div>
             <div className='image-user-sidebar'></div>
             <div className='info'>
-                <h3>Name</h3>
-                <p>Lorem ipsum dolor...</p>
+                <h3>{props.name}</h3>
+                <p>{props.textMessage}</p>
             </div>
         </div>
         <div>
-            <h5 className='time'>15:06</h5>
+            <h5 className='time'>{props.time}</h5>
         </div>
     </div>
   )

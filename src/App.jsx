@@ -1,5 +1,7 @@
 import React from 'react'
 import './App.css'
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
+
 // import Navbar from './Navbar.jsx'
 // import {nanoid} from 'nanoid'
 // import DataChat2 from './DataChat2.jsx'
@@ -95,12 +97,30 @@ function App() {
 
 
 
-  return (
-    <div className='whatsapp'>
-      <Sidebar/>
-      <ChatSection/>
-    </div>
-  )
+<Router>
+<Routes>
+    <Route path="/" element={<Marco/>}/>
+    <Route path="/giada" element={<Giada/>}/>
+</Routes>
+</Router>
+
+
+//BACKUP
+//   return (
+//     <div className='whatsapp'>
+//       <Sidebar/>
+//       <ChatSection/>
+//     </div>
+//   )
+// }
+
+
+return (
+  <div className='whatsapp'>
+    <Sidebar/>
+    <ChatSection/>
+  </div>
+)
 }
 
 export default App
