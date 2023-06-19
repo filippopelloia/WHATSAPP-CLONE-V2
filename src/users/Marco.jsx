@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react'
 
 import {nanoid} from 'nanoid'
 import DataChat2 from '../DataChat2.jsx'
+import Topbar from '../components/Topbar.jsx'
 import Bottombar from '../components/Bottombar.jsx'
 
 export default function Marco() {
@@ -95,13 +96,12 @@ export default function Marco() {
 
   return (
       <>
-        {/* <div className='chat-section'>
+        <div className='chat-section'>
             <Topbar/>
                 <div className='section'>
-                    <div className='message'>Hey, ti ricordi di me? Sono Giulio!</div>
-                </div> */}
+                    <div className='message'>Hey, ti ricordi di me? Sono Marco!</div>
+                </div>
 
-              <h1>SEI DA MARCO</h1>
 
               {showCardMessages}
 
@@ -110,7 +110,7 @@ export default function Marco() {
                       setText={(e) => setText(e.target.value)}
               />
 
-        {/* </div> */}
+        </div>
       </>
   )
 }

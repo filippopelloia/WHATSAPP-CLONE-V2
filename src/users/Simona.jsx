@@ -5,7 +5,7 @@ import DataChat2 from '../DataChat2.jsx'
 import Topbar from '../components/Topbar.jsx'
 import Bottombar from '../components/Bottombar.jsx'
 
-export default function Giada() {
+export default function Simona() {
 
 
       //CONTATORE
