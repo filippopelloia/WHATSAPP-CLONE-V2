@@ -110,6 +110,7 @@ export default function Giada() {
 
               <Bottombar salva={() => saveInMemory()} 
                       setText={(e) => setText(e.target.value)}
+                         text={text}
               />
 
         </div>

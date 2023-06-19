@@ -110,6 +110,7 @@ export default function Silvana() {
 
               <Bottombar salva={() => saveInMemory()} 
                       setText={(e) => setText(e.target.value)}
+                         text={text}
               />
 
         </div>

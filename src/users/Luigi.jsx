@@ -110,6 +110,7 @@ export default function Luigi() {
 
               <Bottombar salva={() => saveInMemory()} 
                       setText={(e) => setText(e.target.value)}
+                         text={text}
               />
 
         </div>

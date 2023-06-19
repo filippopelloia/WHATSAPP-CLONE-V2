@@ -181,13 +181,26 @@ svg{
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 5.5vh;
+  padding: 2.35vh;
   box-sizing: border-box;
+  position: relative;
+  z-index: 1;
+}
+
+.header{
+  height: 15vh;
+  width: 100%;
+  background-color: #01A783;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 2;
 }
 
 .sidebar{
   height: 100%;
   width: 31%;
+  z-index: 3;
 }
 
 .topbar-sidebar{
@@ -212,7 +225,8 @@ svg{
   width: 69%;
   height: 100%;
   background-image: url('./assets/background.png');
-  background-size: 65vh;
+  background-size: 50vh;
+  z-index: 3;
 }
 
 .card-user{
@@ -238,7 +252,7 @@ svg{
 
 .contacts{
   overflow-y: auto;
-  height: 66.5vh;
+  height: 72.8vh;
 }
 
 

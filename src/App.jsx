@@ -14,6 +14,7 @@ import Giancarlo from './users/Giancarlo.jsx';
 import Silvana from './users/Silvana.jsx';
 import Giacomo from './users/Giacomo.jsx';
 import Crystal from './users/Crystal.jsx';
+import Chiara from './users/Chiara.jsx';
 
 import Sidebar from './components/Sidebar.jsx'
 
@@ -24,6 +25,7 @@ function App() {
 
 return (
   <div className='whatsapp'>
+    <div className='header'></div>
     <Router>
       <Sidebar/>
       {/* <ChatSection> */}
@@ -36,6 +38,7 @@ return (
           <Route path="/silvana" element={<Silvana/>}/>
           <Route path="/giacomo" element={<Giacomo/>}/>
           <Route path="/crystal" element={<Crystal/>}/>
+          <Route path="/chiara" element={<Chiara/>}/>
         </Routes>
       {/* </ChatSection> */}
     </Router>

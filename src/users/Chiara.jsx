@@ -1,13 +1,13 @@
 import React, {useState, useEffect} from 'react'
 
 import {nanoid} from 'nanoid'
-import DataChat7 from '../DataChat7.jsx'
+import DataChat9 from '../DataChat9.jsx'
 import Topbar from '../components/Topbar.jsx'
 import Bottombar from '../components/Bottombar.jsx'
 
-import user8 from '../assets/user8.jpg';
+import user9 from '../assets/user9.jpg';
 
-export default function Giacomo() {
+export default function Chiara() {
 
 
       //CONTATORE
@@ -26,12 +26,12 @@ export default function Giacomo() {
     
       useEffect(() => {
         if(counter === 0){
-          setChat(prevChat => [DataChat7[counter]])
+          setChat(prevChat => [DataChat9[counter]])
         }else if(counter === 1 || counter === 3){
-          setChat(prevChat => [...prevChat, DataChat7[counter]])
+          setChat(prevChat => [...prevChat, DataChat9[counter]])
           setCounter(prevCounter => prevCounter + 1)
         }else{
-          setChat(prevChat => [...prevChat, DataChat7[counter]])
+          setChat(prevChat => [...prevChat, DataChat9[counter]])
         }
       }, [counter])
     
@@ -99,9 +99,9 @@ export default function Giacomo() {
   return (
       <>
         <div className='chat-section'>
-            <Topbar image={user8}/>
+            <Topbar image={user9}/>
                 <div className='section'>
-                    <div className='message'>Ho trovato il lavoro che sognavo!!</div>
+                    <div className='message'>La Giulia mi ha scritto...</div>
                 </div>
 
 

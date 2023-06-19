@@ -15,6 +15,7 @@ import user5 from '../assets/user5.jpg';
 import user6 from '../assets/user6.jpg';
 import user7 from '../assets/user7.jpg';
 import user8 from '../assets/user8.jpg';
+import user9 from '../assets/user9.jpg';
 
 
 export default function Sidebar() {
@@ -28,6 +29,7 @@ export default function Sidebar() {
         {id: 5, name: 'Silvana', textMessage: 'Mi sa che non ci vedremo domani...', time: '17:55', url:'/silvana', image:`${user3}`},
         {id: 6, name: 'Giacomo', textMessage: 'Ho trovato il lavoro che sognavo!!!', time: '22:02', url:'/giacomo', image:`${user8}`},
         {id: 7, name: 'Crystal', textMessage: 'Ma perchè hanno aumentato il prezzo di Netflix?', time: '05:59', url:'/crystal', image:`${user4}`},
+        {id: 8, name: 'Chiara', textMessage: 'La Giulia mi ha scritto...', time: '17:17', url:'/chiara', image:`${user9}`},
     ])
 
     const [results, setResults] = useState(users);
