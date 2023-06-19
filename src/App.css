@@ -29,7 +29,7 @@ body{
 
 .section{
   height: auto;
-  background-color: aqua;
+  /* background-color: aqua; */
   width: 100%;
   margin: 20px 0;
 }

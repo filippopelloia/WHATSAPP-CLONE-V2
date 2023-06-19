@@ -97,11 +97,10 @@ function App() {
     
     const messageClass = item.id === 1 ||  item.id === 3 ? 'section' : 'section right-side';
 
-    return <>
-                    
-                        {/*======== TEST ========*/}
+    return <>          
 
-                         {((item.id === 0 || item.id === 2 || item.id === 4) && item.testo === '') ? 
+                         {/* SE E' UGUALE A ZERO O E' PARI */}
+                         {(item.id % 2 === 0 && item.testo === '') ? 
                          '' 
                          : 
                          <div className={messageClass}>
