@@ -16,15 +16,98 @@
   width: 100%;
 } */
 
+.topbar{
+  height: 7.5vh;
+  width: 100%;
+  background-color: #F1F2F6;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  box-sizing: border-box;
+  justify-content: space-between;
+}
+
+.topbar > div{
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.image-user, .image-profile{
+  width: 4vh;
+  cursor: pointer;
+  height: 4vh;
+  background-color: aqua;
+  border-radius: 50%;
+}
+
+.image-user{
+  background-color: aqua;
+}
+
+.image-profile{
+  background-color: red;
+}
+
 .bottombar{
   height: 7.5vh;
   width: 100%;
-  background-color: lightgray;
+  background-color: #F1F2F6;
   position: absolute;
   bottom: 0;
   left: 0;
   z-index: 2;
   box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  gap: 10px;
+}
+
+.input-section{
+  height: 7.5vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  gap: 17.5px;
+  background-color: #fff;
+  border-bottom: 1px solid lightgray;
+}
+
+.input-text, .input-text-sidebar{
+  padding: 10px 20px;
+  border: 1px solid #fff;
+  border-radius: 7.5px
+}
+
+.input-text{
+  width: 85%;
+}
+
+.input-text-sidebar{
+  width: 100%;
+  background-color: #F1F2F6;
+}
+
+.input-text:focus, .input-text-sidebar:focus{
+  outline: none;
+}
+
+.archive-section{
+  height: 7.5vh;
+  background-color: #fff;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  padding: 0 20px;
+  gap: 17.5px;
+}
+
+svg{
+  color: #52636D;
+  cursor: pointer;
 }
 
 .container{
@@ -35,7 +118,7 @@
 .section{
   height: auto;
   /* background-color: aqua; */
-  width: 100%;
+  width: auto;
   margin: 20px;
 }
 
@@ -57,7 +140,7 @@
 .whatsapp{
   height: 100vh;
   width: 100%;
-  background-color: blue;
+  background-color: #E1E0DC;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -71,9 +154,27 @@
   background-color: aqua;
 }
 
+.topbar-sidebar{
+  border-right: 1px solid lightgrey;
+  height: 7.5vh;
+  width: 100%;
+  background-color: #F1F2F6;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  box-sizing: border-box;
+  justify-content: space-between;
+}
+
+.topbar-sidebar > div{
+  display: flex;
+  gap: 25px;
+}
+
 .chat-section{
   position: relative;
   width: 69%;
   height: 100%;
-  background-color: brown;
+  background-image: url('./assets/background.png');
+  background-size: 65vh;
 }

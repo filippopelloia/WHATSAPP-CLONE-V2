@@ -3,6 +3,7 @@ import React, {useState, useEffect} from 'react'
 import Bottombar from './Bottombar.jsx'
 import {nanoid} from 'nanoid'
 import DataChat2 from '../DataChat2.jsx'
+import Topbar from './Topbar.jsx'
 
 
 
@@ -97,6 +98,7 @@ const showCardMessages = box.map(item => {
   return (
     <>
         <div className='chat-section'>
+            <Topbar/>
             {/* <div className='container'> */}
                 <div className='section'>
                     <div className='message'>Hey, ti ricordi di me? Sono Giulio!</div>
