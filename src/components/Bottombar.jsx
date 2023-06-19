@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 
-export default function Navbar(props) {
+export default function Bottombar(props) {
 
   return (
     <div className='navbar'>

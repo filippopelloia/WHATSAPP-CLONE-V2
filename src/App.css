@@ -6,14 +6,17 @@
   box-sizing: content-box;
 }
 
-body{
+/* body{
   background-color: #262626;
   position: relative;
   z-index: 1;
   height: 100vh;
-}
+  top: 0;
+  left: 0;
+  width: 100%;
+} */
 
-.navbar{
+.bottombar{
   height: 7.5vh;
   width: 100%;
   background-color: lightgray;
@@ -21,10 +24,12 @@ body{
   bottom: 0;
   left: 0;
   z-index: 2;
+  box-sizing: border-box;
 }
 
 .container{
   padding: 0 22.5px;
+  position: relative;
 }
 
 .section{
@@ -47,4 +52,28 @@ body{
   /* float: right; */
   display: flex;
   justify-content: end;
+}
+
+.whatsapp{
+  height: 100vh;
+  width: 100%;
+  background-color: blue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5.5vh;
+  box-sizing: border-box;
+}
+
+.sidebar{
+  height: 100%;
+  width: 31%;
+  background-color: aqua;
+}
+
+.chat-section{
+  position: relative;
+  width: 69%;
+  height: 100%;
+  background-color: brown;
 }
