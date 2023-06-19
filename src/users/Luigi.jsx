@@ -1,11 +1,11 @@
 import React, {useState, useEffect} from 'react'
 
 import {nanoid} from 'nanoid'
-import DataChat3 from '../DataChat3.jsx'
+import DataChat4 from '../DataChat4.jsx'
 import Topbar from '../components/Topbar.jsx'
 import Bottombar from '../components/Bottombar.jsx'
 
-export default function Simona() {
+export default function Luigi() {
 
 
       //CONTATORE
@@ -24,12 +24,12 @@ export default function Simona() {
     
       useEffect(() => {
         if(counter === 0){
-          setChat(prevChat => [DataChat3[counter]])
+          setChat(prevChat => [DataChat4[counter]])
         }else if(counter === 1 || counter === 3){
-          setChat(prevChat => [...prevChat, DataChat3[counter]])
+          setChat(prevChat => [...prevChat, DataChat4[counter]])
           setCounter(prevCounter => prevCounter + 1)
         }else{
-          setChat(prevChat => [...prevChat, DataChat3[counter]])
+          setChat(prevChat => [...prevChat, DataChat4[counter]])
         }
       }, [counter])
     
@@ -99,7 +99,7 @@ export default function Simona() {
         <div className='chat-section'>
             <Topbar/>
                 <div className='section'>
-                    <div className='message'>Hai visto il film Dune? Quello del 2021.</div>
+                    <div className='message'>Vieni con me in Portogallo a Novembre?</div>
                 </div>
 
 

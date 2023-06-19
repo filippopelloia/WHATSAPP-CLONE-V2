@@ -1,7 +1,10 @@
 const DataChat = [
-    {id: 0, testo: '', timeText: '', answer: 'Come stai?', timeAnswer: '18:11'},
-    {id: 1, testo: '', timeText: '', answer: 'Tutto bene, io sto alla grande qui in Portogallo!', timeAnswer: '18:19'},
-    {id: 2, testo: '', timeText: '', answer: 'Mi sono trasferito qui a Novembre 2021.', timeAnswer: '18:32'},
+    {id: 0, testo: '', timeText: ''},
+    {id: 1, risposta: 'Volevo vederti e darti il regalo', timeText: '14:30'},
+    {id: 2, testo: '', timeText: ''},
+    {id: 3, risposta: 'Prima o poi riusciremo a vederci', timeText: '14:44'},
+    {id: 4, testo: '', timeText: ''},
+    {id: 5, risposta: 'Abitiamo cosi vicini poi...', timeText: '14:58'},
 ]
 
 export default DataChat;

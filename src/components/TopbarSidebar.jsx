@@ -1,4 +1,5 @@
 import React from 'react'
+import foto from '../assets/foto.jpg';
 
 import PeopleAltIcon from '@mui/icons-material/PeopleAlt';
 import DonutLargeIcon from '@mui/icons-material/DonutLarge';
@@ -9,7 +10,9 @@ export default function TopbarSidebar() {
   return (
     <div className='topbar-sidebar'>
         <div>
-            <div className='image-profile'></div>
+            <div className='image-profile'>
+              <img src={foto} alt="Filippo Pelloia"/>
+            </div>
         </div>
 
         <div>
