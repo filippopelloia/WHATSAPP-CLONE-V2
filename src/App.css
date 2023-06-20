@@ -217,7 +217,22 @@ svg{
 
 .topbar-sidebar > div{
   display: flex;
+  align-items: center;
   gap: 25px;
+}
+
+.MuiButtonBase-root{
+  min-width: 0!important;
+  padding: 0!important;
+}
+
+ul{
+  min-width: 17.5vh;
+  padding: 20px!important;
+}
+
+ul li{
+  margin: 12.5px 0!important;
 }
 
 .chat-section{

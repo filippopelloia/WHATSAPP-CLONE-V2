@@ -17,31 +17,33 @@ import Crystal from './users/Crystal.jsx';
 import Chiara from './users/Chiara.jsx';
 
 import Sidebar from './components/Sidebar.jsx'
-
+import ChangemodeContext from './components/DarkmodeContext.jsx';
 
 function App() {
 
-
+// const {mode, changeMode} = useContext(DarkmodeContext);
 
 return (
   <div className='whatsapp'>
     <div className='header'></div>
-    <Router>
-      <Sidebar/>
-      {/* <ChatSection> */}
-        <Routes>
-          <Route path="/" element={<Marco/>}/>
-          <Route path="/giada" element={<Giada/>}/>
-          <Route path="/simona" element={<Simona/>}/>
-          <Route path="/luigi" element={<Luigi/>}/>
-          <Route path="/giancarlo" element={<Giancarlo/>}/>
-          <Route path="/silvana" element={<Silvana/>}/>
-          <Route path="/giacomo" element={<Giacomo/>}/>
-          <Route path="/crystal" element={<Crystal/>}/>
-          <Route path="/chiara" element={<Chiara/>}/>
-        </Routes>
-      {/* </ChatSection> */}
-    </Router>
+    <ChangemodeContext>
+      <Router>
+        <Sidebar/>
+        {/* <ChatSection> */}
+          <Routes>
+            <Route path="/" element={<Marco/>}/>
+            <Route path="/giada" element={<Giada/>}/>
+            <Route path="/simona" element={<Simona/>}/>
+            <Route path="/luigi" element={<Luigi/>}/>
+            <Route path="/giancarlo" element={<Giancarlo/>}/>
+            <Route path="/silvana" element={<Silvana/>}/>
+            <Route path="/giacomo" element={<Giacomo/>}/>
+            <Route path="/crystal" element={<Crystal/>}/>
+            <Route path="/chiara" element={<Chiara/>}/>
+          </Routes>
+        {/* </ChatSection> */}
+      </Router>
+    </ChangemodeContext>
   </div>
 )
 }

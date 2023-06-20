@@ -17,6 +17,6 @@ export default function Topbar(props) {
           <SearchIcon/>
           <MoreVertIcon/>
         </div>
-    </div>
+    </div> 
   )
 }

@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react'
+import React, {useState, useEffect, useContext} from 'react'
 import { Link } from 'react-router-dom'
 
 import TopbarSidebar from './TopbarSidebar.jsx'
@@ -6,6 +6,8 @@ import CardUser from './CardUser.jsx';
 
 import AppsIcon from '@mui/icons-material/Apps';
 import ArchiveIcon from '@mui/icons-material/Archive';
+
+// import DarkmodeContext from './DarkmodeContext.jsx'
 
 import user1 from '../assets/user1.jpg';
 import user2 from '../assets/user2.jpg';
@@ -33,6 +35,7 @@ export default function Sidebar() {
     ])
 
     const [results, setResults] = useState(users);
+    // const {mode} = useContext(DarkmodeContext);
 
     useEffect(() => {
         setResults(users);
@@ -73,7 +76,7 @@ export default function Sidebar() {
     console.log(users.length);
 
 
-
+    // style={{backgroundColor: mode ? 'red' : 'gold'}}
   return (
     <div className='sidebar'>
         <TopbarSidebar />
