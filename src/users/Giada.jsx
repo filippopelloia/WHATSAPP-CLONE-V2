@@ -1,13 +1,24 @@
-import React, {useState, useEffect} from 'react'
+import React, {useState, useEffect, useContext} from 'react'
 
 import {nanoid} from 'nanoid'
 import DataChat2 from '../DataChat2.jsx'
 import Topbar from '../components/Topbar.jsx'
 import Bottombar from '../components/Bottombar.jsx'
+import {ChangemodeContext} from '../components/DarkmodeContext.jsx'
 
 import user1 from '../assets/user1.jpg';
 
 export default function Giada() {
+
+  const { mode } = useContext(ChangemodeContext);
+  
+  //STILE DARK - LIGHT MODE
+  const darkText = () => {
+    return{
+      color: mode ? '#E5F0EC' : '#52636D',
+      backgroundColor: mode ? '#1F2C34' : '#F1F2F6'  
+    }
+  }
 
 
       //CONTATORE
@@ -70,6 +81,7 @@ export default function Giada() {
                       <div className={messageClass}>
                       <div key={nanoid()} 
                             id={item.id} 
+                            style={darkText()}
                             className='message'>
                               {item?.risposta || item?.testo}
                         </div>
@@ -98,10 +110,10 @@ export default function Giada() {
 
   return (
       <>
-        <div className='chat-section'>
+         <div className={mode ? 'chat-section dark-back' : 'chat-section light-back'}>
             <Topbar image={user1} name="Giada" />
                 <div className='section'>
-                    <div className='message'>Ciao Filippo, sei in zona Treviso per caso?</div>
+                    <div className='message' style={darkText()}>Ciao Filippo, sei in zona Treviso per caso?</div>
                 </div>
 
 

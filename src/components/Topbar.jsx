@@ -9,13 +9,21 @@ export default function Topbar(props) {
 
   const { mode } = useContext(ChangemodeContext);
 
+    //STILE DARK - LIGHT MODE
+    const darkText = () => {
+      return{
+        color: mode ? '#E5F0EC' : '#52636D',
+        backgroundColor: mode ? '#1F2C34' : '#F1F2F6'  
+      }
+    }
+
   return (
-    <div className='topbar' style={{backgroundColor: mode ? '#1F2C34' : '#F1F2F6'}}>
+    <div className='topbar' style={darkText()}>
         <div>
           <div className='image-user'>
             <img src={props.image} alt="image user"/>
           </div>
-          <h3>{props.name}</h3>
+          <h3 style={darkText()}>{props.name}</h3>
         </div>
           
         <div>

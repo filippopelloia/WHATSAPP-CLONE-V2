@@ -36,6 +36,15 @@ export default function Sidebar() {
     const [results, setResults] = useState(users);
     const {mode} = useContext(ChangemodeContext);
 
+    //STILE DARK - LIGHT MODE
+    const darkText = () => {
+        return{
+            color: mode ? '#E5F0EC' : '#52636D',
+            backgroundColor: mode ? '#1F2C34' : '#F1F2F6'  
+        }
+    }
+
+
     useEffect(() => {
         setResults(users);
     }, [users])
@@ -77,11 +86,11 @@ export default function Sidebar() {
 
     // style={{backgroundColor: mode ? 'red' : 'gold'}}
   return (
-    <div className='sidebar' style={{backgroundColor: mode ? '#1F2C34' : '#F1F2F6'}}>
+    <div className='sidebar' style={darkText()}>
         <TopbarSidebar />
-        <div className='input-section' style={{backgroundColor: mode ? '#1F2C34' : '#F1F2F6'}}>
+        <div className='input-section' style={darkText()}>
             <input type="text" 
-                   style={{backgroundColor: mode ? '#1F2C34' : '#F1F2F6'}}
+                   style={darkText()}
                    placeholder="Search a user..."
                    className='input-text-sidebar'
                    onChange={(e) => searchUser(e)}
@@ -89,9 +98,9 @@ export default function Sidebar() {
             <AppsIcon/>
         </div>
 
-        <div className='archive-section' style={{backgroundColor: mode ? '#1F2C34' : '#F1F2F6'}}>
+        <div className='archive-section' style={darkText()}>
             <ArchiveIcon/>
-            <h4>Archive</h4>
+            <h4 style={darkText()}>Archive</h4>
         </div>
 
         <div className='contacts'>
