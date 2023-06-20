@@ -1,13 +1,12 @@
 import React, {useState, useEffect, useContext} from 'react'
 import { Link } from 'react-router-dom'
+import {ChangemodeContext} from './DarkmodeContext.jsx'
 
 import TopbarSidebar from './TopbarSidebar.jsx'
 import CardUser from './CardUser.jsx';
 
 import AppsIcon from '@mui/icons-material/Apps';
 import ArchiveIcon from '@mui/icons-material/Archive';
-
-// import DarkmodeContext from './DarkmodeContext.jsx'
 
 import user1 from '../assets/user1.jpg';
 import user2 from '../assets/user2.jpg';
@@ -35,7 +34,7 @@ export default function Sidebar() {
     ])
 
     const [results, setResults] = useState(users);
-    // const {mode} = useContext(DarkmodeContext);
+    const {mode} = useContext(ChangemodeContext);
 
     useEffect(() => {
         setResults(users);
@@ -55,7 +54,7 @@ export default function Sidebar() {
         setResults(filteredUser);
     }
 
-       console.log(results);
+    //    console.log(results);
     
 
     const showUsers = results.map(item => (
@@ -78,10 +77,11 @@ export default function Sidebar() {
 
     // style={{backgroundColor: mode ? 'red' : 'gold'}}
   return (
-    <div className='sidebar'>
+    <div className='sidebar' style={{backgroundColor: mode ? '#1F2C34' : '#F1F2F6'}}>
         <TopbarSidebar />
-        <div className='input-section'>
+        <div className='input-section' style={{backgroundColor: mode ? '#1F2C34' : '#F1F2F6'}}>
             <input type="text" 
+                   style={{backgroundColor: mode ? '#1F2C34' : '#F1F2F6'}}
                    placeholder="Search a user..."
                    className='input-text-sidebar'
                    onChange={(e) => searchUser(e)}
@@ -89,7 +89,7 @@ export default function Sidebar() {
             <AppsIcon/>
         </div>
 
-        <div className='archive-section'>
+        <div className='archive-section' style={{backgroundColor: mode ? '#1F2C34' : '#F1F2F6'}}>
             <ArchiveIcon/>
             <h4>Archive</h4>
         </div>

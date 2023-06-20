@@ -1,13 +1,16 @@
-import React, {useState, useEffect} from 'react'
+import React, {useState, useEffect, useContext} from 'react'
 
 import {nanoid} from 'nanoid'
 import DataChat7 from '../DataChat7.jsx'
 import Topbar from '../components/Topbar.jsx'
 import Bottombar from '../components/Bottombar.jsx'
+import {ChangemodeContext} from '../components/DarkmodeContext.jsx'
 
 import user8 from '../assets/user8.jpg';
 
 export default function Giacomo() {
+
+  const { mode } = useContext(ChangemodeContext);
 
 
       //CONTATORE
@@ -70,7 +73,9 @@ export default function Giacomo() {
                       <div className={messageClass}>
                       <div key={nanoid()} 
                             id={item.id} 
-                            className='message'>
+                            className='message' 
+                            style={{backgroundColor: mode ? '#1F2C34' : '#F1F2F6'}}
+                      >
                               {item?.risposta || item?.testo}
                         </div>
                     </div>}
@@ -98,10 +103,11 @@ export default function Giacomo() {
 
   return (
       <>
-        <div className='chat-section'>
+        <div className={mode ? 'chat-section dark-back' : 'chat-section light-back'}>
+
             <Topbar image={user8} name="Giacomo" />
                 <div className='section'>
-                    <div className='message'>Ho trovato il lavoro che sognavo!!</div>
+                    <div className='message' style={{backgroundColor: mode ? '#1F2C34' : '#F1F2F6'}}>Ho trovato il lavoro che sognavo!!</div>
                 </div>
 
 
@@ -114,6 +120,7 @@ export default function Giacomo() {
                          typeEmoji={setText}
                          text={text}
               />
+
 
         </div>
       </>

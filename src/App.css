@@ -239,9 +239,16 @@ ul li{
   position: relative;
   width: 69%;
   height: 100%;
-  background-image: url('./assets/background.png');
   background-size: 50vh;
   z-index: 3;
+}
+
+.light-back{
+  background-image: url('./assets/background.png');
+}
+
+.dark-back{
+  background-image: url('./assets/background-dark.jpg');
 }
 
 .card-user{

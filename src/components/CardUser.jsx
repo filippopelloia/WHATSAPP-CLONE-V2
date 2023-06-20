@@ -1,8 +1,13 @@
-import React from 'react'
+import React, {useState, useContext} from 'react'
+
+import {ChangemodeContext} from './DarkmodeContext.jsx'
 
 export default function CardUser(props) {
+
+  const { mode } = useContext(ChangemodeContext);
+
   return (
-    <div className='card-user'>
+    <div className='card-user' style={{backgroundColor: mode ? '#1F2C34' : '#F1F2F6'}}>
         <div>
             <div className='image-user-sidebar'>
               <img src={props.image} alt="image profile"/>

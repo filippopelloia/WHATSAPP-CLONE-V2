@@ -1,6 +1,8 @@
-import React, {useState} from 'react'
+import React, {useState, useContext} from 'react'
 
 import EmojiPicker from 'emoji-picker-react';
+
+import {ChangemodeContext} from './DarkmodeContext.jsx'
 
 import EmojiEmotionsIcon from '@mui/icons-material/EmojiEmotions';
 import AttachFileIcon from '@mui/icons-material/AttachFile';
@@ -10,6 +12,7 @@ import SendIcon from '@mui/icons-material/Send';
 export default function Bottombar(props) {
 
   const [emojiWindow, setEmojiWindow] = useState(false);
+  const { mode } = useContext(ChangemodeContext);
 
   function showEmoji(){
     setEmojiWindow(prevEmojiWindow => !prevEmojiWindow)
@@ -26,7 +29,7 @@ export default function Bottombar(props) {
           </div>
       )}
 
-      <div className='bottombar'>
+      <div className='bottombar' style={{backgroundColor: mode ? '#1F2C34' : '#F1F2F6'}}>
         <EmojiEmotionsIcon onClick={() => showEmoji()}/>
 {/* 
         {emojiWindow && (
@@ -38,6 +41,7 @@ export default function Bottombar(props) {
 
         <AttachFileIcon/>
           <input type="text"
+                 style={{backgroundColor: mode ? '#1F2C34' : '#F1F2F6'}}
                  value={props.text}
                  className='input-text'
                  placeholder='Type a message...'
