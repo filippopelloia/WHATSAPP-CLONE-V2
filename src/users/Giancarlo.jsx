@@ -117,7 +117,9 @@ export default function Giancarlo() {
 
 
               <Bottombar salva={() => saveInMemory()} 
-                      setText={(e) => setText(e.target.value)}
+                        //  setText={(e) => setText(e.target.value)}
+                         setText={setText}
+                         typeEmoji={setText}
                          text={text}
               />
 

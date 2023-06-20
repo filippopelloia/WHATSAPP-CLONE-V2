@@ -17,14 +17,31 @@ export default function Bottombar(props) {
 
   return (
     <>
-      {emojiWindow && <div className="emoji"><EmojiPicker/></div>}
+      {/* {emojiWindow && <div className="emoji"><EmojiPicker/></div>} */}
+      {emojiWindow && (
+          <div className="emoji">
+            <EmojiPicker
+                  onEmojiClick={(emojiObject, e) => props.setText(props.text + emojiObject.emoji)}
+            />
+          </div>
+      )}
+
       <div className='bottombar'>
         <EmojiEmotionsIcon onClick={() => showEmoji()}/>
+{/* 
+        {emojiWindow && (
+            <EmojiPicker
+                onClick={() => showEmoji()}
+                onEmojiClick={(event, emojiObject) => setText(text + emojiObject.emoji)}
+            />
+        )} */}
+
         <AttachFileIcon/>
           <input type="text"
-                className='input-text'
-                placeholder='Type a message...'
-                onChange={props.setText}
+                 value={props.text}
+                 className='input-text'
+                 placeholder='Type a message...'
+                 onChange={(e) => props.setText(e.target.value)}
           />
           {/* <button onClick={props.salva}>Send</button> */}
           {props.text !== '' ? <SendIcon onClick={props.salva}/> 
