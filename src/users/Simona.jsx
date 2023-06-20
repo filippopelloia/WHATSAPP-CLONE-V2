@@ -99,14 +99,6 @@ export default function Simona() {
       return <>{item}</>
     })
     
-    
-    // console.log(box);
-    // console.log(chat);
-    // console.log(counter);
-    
-    
-
-
 
 
   return (
@@ -122,7 +114,6 @@ export default function Simona() {
 
 
               <Bottombar salva={() => saveInMemory()} 
-                        //  setText={(e) => setText(e.target.value)}
                          setText={setText}
                          typeEmoji={setText}
                          text={text}

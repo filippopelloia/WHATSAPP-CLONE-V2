@@ -44,31 +44,6 @@ p{
   object-fit: cover;
 }
 
-/* .image-user{
-  width: 4vh;
-  cursor: pointer;
-  height: 4vh;
-  background-color: aqua;
-  border-radius: 50%;
-} */
-
-/* .image-user > img{
-  display: block;
-  width: 100%;
-  border-radius: 50%;
-  height: 4vh;
-  width: 4vh;
-  object-fit: cover;
-  cursor: pointer;
-} */
-
-
-
-/* .image-user{
-  background-color: aqua;
-} */
-
-
 .image-profile > img, .image-user > img{
   display: block;
   width: 100%;
@@ -156,7 +131,6 @@ svg{
 
 .section{
   height: auto;
-  /* background-color: aqua; */
   width: auto;
   margin: 20px;
 }
@@ -167,11 +141,10 @@ svg{
   background-color: #fff;
   width: fit-content;
   border-radius: 7.5px;
-  /* margin: 20px 25px; */
 }
 
 .right-side{
-  /* float: right; */
+
   display: flex;
   justify-content: end;
 }
@@ -301,12 +274,6 @@ ul li{
 ::-webkit-scrollbar-thumb:hover {
   background: #555; /* Colore del pollice durante l'hover */
 }
-
-/* .bottom-container{
-  position: relative;
-  bottom: 0;
-  right: 0;
-} */
 
 .EmojiPickerReact {
   height: 44vh!important;

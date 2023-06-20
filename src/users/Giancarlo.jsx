@@ -97,14 +97,6 @@ export default function Giancarlo() {
     const showCardMessages = box.map(item => {
       return <>{item}</>
     })
-    
-    
-    // console.log(box);
-    // console.log(chat);
-    // console.log(counter);
-    
-    
-
 
 
 
@@ -129,7 +121,6 @@ export default function Giancarlo() {
 
 
               <Bottombar salva={() => saveInMemory()} 
-                        //  setText={(e) => setText(e.target.value)}
                          setText={setText}
                          typeEmoji={setText}
                          text={text}

@@ -100,14 +100,6 @@ export default function Chiara() {
     })
     
     
-    // console.log(box);
-    // console.log(chat);
-    // console.log(counter);
-    // console.log(text);
-    
-    
-
-
 
 
   return (
@@ -124,7 +116,6 @@ export default function Chiara() {
 
 
               <Bottombar salva={() => saveInMemory()} 
-                        //  setText={(e) => setText(e.target.value)}
                          setText={setText}
                          typeEmoji={setText}
                          text={text}

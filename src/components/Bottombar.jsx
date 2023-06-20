@@ -20,7 +20,6 @@ export default function Bottombar(props) {
 
   return (
     <>
-      {/* {emojiWindow && <div className="emoji"><EmojiPicker/></div>} */}
       {emojiWindow && (
           <div className="emoji">
             <EmojiPicker
@@ -31,13 +30,7 @@ export default function Bottombar(props) {
 
       <div className='bottombar' style={{backgroundColor: mode ? '#1F2C34' : '#F1F2F6'}}>
         <EmojiEmotionsIcon onClick={() => showEmoji()}/>
-{/* 
-        {emojiWindow && (
-            <EmojiPicker
-                onClick={() => showEmoji()}
-                onEmojiClick={(event, emojiObject) => setText(text + emojiObject.emoji)}
-            />
-        )} */}
+
 
         <AttachFileIcon/>
           <input type="text"
@@ -47,7 +40,6 @@ export default function Bottombar(props) {
                  placeholder='Type a message...'
                  onChange={(e) => props.setText(e.target.value)}
           />
-          {/* <button onClick={props.salva}>Send</button> */}
           {props.text !== '' ? <SendIcon onClick={props.salva}/> 
           : <KeyboardVoiceIcon/>}
       </div>

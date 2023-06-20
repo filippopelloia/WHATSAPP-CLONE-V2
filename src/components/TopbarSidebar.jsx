@@ -6,7 +6,6 @@ import {ChangemodeContext} from './DarkmodeContext.jsx'
 import PeopleAltIcon from '@mui/icons-material/PeopleAlt';
 import DonutLargeIcon from '@mui/icons-material/DonutLarge';
 import MessageIcon from '@mui/icons-material/Message';
-// import MoreVertIcon from '@mui/icons-material/MoreVert';
 
 
 export default function TopbarSidebar() {
@@ -37,7 +36,6 @@ export default function TopbarSidebar() {
             <div className='mode-btn'>
               <Mode changeMode={() => changeMode()} />
             </div>
-            {/* <MoreVertIcon/> */}
         </div>
     </div>
   )

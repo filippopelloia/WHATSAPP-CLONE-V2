@@ -1,5 +1,6 @@
 import React, {useState, useEffect, useContext} from 'react'
 import { Link } from 'react-router-dom'
+import { nanoid } from 'nanoid';
 import {ChangemodeContext} from './DarkmodeContext.jsx'
 
 import TopbarSidebar from './TopbarSidebar.jsx'
@@ -49,11 +50,6 @@ export default function Sidebar() {
         setResults(users);
     }, [users])
 
-    // console.log(results);
-
-    // const filtro = results.filter(item => {
-    //     item.name.toLowerCase().startsWith()
-    // })
 
     function searchUser(e){
         const inputValue = e.target.value
@@ -63,8 +59,6 @@ export default function Sidebar() {
         setResults(filteredUser);
     }
 
-    //    console.log(results);
-    
 
     const showUsers = results.map(item => (
             <Link to={item.url}>
@@ -80,11 +74,6 @@ export default function Sidebar() {
     ));
 
 
-
-    console.log(users.length);
-
-
-    // style={{backgroundColor: mode ? 'red' : 'gold'}}
   return (
     <div className='sidebar' style={darkText()}>
         <TopbarSidebar />
