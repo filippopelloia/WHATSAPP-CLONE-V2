@@ -8,7 +8,7 @@ import {ChangemodeContext} from './DarkmodeContext.jsx';
 
 export default function Mode(props) {
 
-  const {changeMode} = React.useContext(ChangemodeContext);
+  const {mode, changeMode} = React.useContext(ChangemodeContext);
 
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
@@ -41,7 +41,7 @@ export default function Mode(props) {
       >
         <MenuItem onClick={handleClose}>Profile</MenuItem>
         <MenuItem onClick={handleClose}>My account</MenuItem>
-        <MenuItem onClick={props.changeMode}>Dark Mode</MenuItem>
+        <MenuItem onClick={props.changeMode}>{mode ? 'Light Mode' : 'Dark Mode'}</MenuItem>
         <MenuItem onClick={handleClose}>Logout</MenuItem>
       </Menu>
     </div>

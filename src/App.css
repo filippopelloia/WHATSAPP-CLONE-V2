@@ -10,6 +10,10 @@ body{
   font-family: 'Helvetica', sans-serif;
 }
 
+h3, h4, .info > h3, .info > p{
+  color: #52636D;
+}
+
 p{
   font-size: 0.85em;
 }
@@ -63,6 +67,7 @@ p{
 /* .image-user{
   background-color: aqua;
 } */
+
 
 .image-profile > img, .image-user > img{
   display: block;
@@ -136,6 +141,7 @@ p{
 
 .time{
   margin-top: -15px;
+  color: #52636D;
 }
 
 svg{
