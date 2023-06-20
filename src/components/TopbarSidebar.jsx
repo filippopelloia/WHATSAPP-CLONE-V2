@@ -13,8 +13,17 @@ export default function TopbarSidebar() {
 
   const { mode, changeMode } = useContext(ChangemodeContext);
 
+  //STILE DARK - LIGHT MODE
+  const darkText = () => {
+    return{
+      color: mode ? '#E5F0EC' : '#52636D',
+      backgroundColor: mode ? '#1F2C34' : '#F1F2F6'  
+    }
+  }
+
+
   return (
-    <div className='topbar-sidebar' style={{backgroundColor: mode ? '#1F2C34' : '#F1F2F6'}}>
+    <div className='topbar-sidebar' style={darkText()}>
         <div>
             <div className='image-profile'>
               <img src={foto} alt="Filippo Pelloia"/>

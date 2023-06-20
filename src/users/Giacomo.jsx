@@ -11,6 +11,14 @@ import user8 from '../assets/user8.jpg';
 export default function Giacomo() {
 
   const { mode } = useContext(ChangemodeContext);
+  
+  //STILE DARK - LIGHT MODE
+  const darkText = () => {
+    return{
+      color: mode ? '#E5F0EC' : '#52636D',
+      backgroundColor: mode ? '#1F2C34' : '#F1F2F6'  
+    }
+  }
 
 
       //CONTATORE
@@ -74,7 +82,8 @@ export default function Giacomo() {
                       <div key={nanoid()} 
                             id={item.id} 
                             className='message' 
-                            style={{backgroundColor: mode ? '#1F2C34' : '#F1F2F6'}}
+                            style={darkText()}
+                            
                       >
                               {item?.risposta || item?.testo}
                         </div>
@@ -107,7 +116,7 @@ export default function Giacomo() {
 
             <Topbar image={user8} name="Giacomo" />
                 <div className='section'>
-                    <div className='message' style={{backgroundColor: mode ? '#1F2C34' : '#F1F2F6'}}>Ho trovato il lavoro che sognavo!!</div>
+                    <div className='message' style={darkText()}>Ho trovato il lavoro che sognavo!!</div>
                 </div>
 
 
