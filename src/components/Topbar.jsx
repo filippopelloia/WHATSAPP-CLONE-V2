@@ -10,7 +10,7 @@ export default function Topbar(props) {
           <div className='image-user'>
             <img src={props.image} alt="image user"/>
           </div>
-          <h3>Name</h3>
+          <h3>{props.name}</h3>
         </div>
           
         <div>

@@ -99,7 +99,7 @@ export default function Giancarlo() {
   return (
       <>
         <div className='chat-section'>
-            <Topbar image={user7}/>
+            <Topbar image={user7} name="Giacomo" />
                 <div className='section'>
                     <div className='message'>Ho fame.</div>
                 </div>

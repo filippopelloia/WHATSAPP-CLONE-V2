@@ -99,7 +99,7 @@ export default function Simona() {
   return (
       <>
         <div className='chat-section'>
-            <Topbar image={user2}/>
+            <Topbar image={user2} name="Simona" />
                 <div className='section'>
                     <div className='message'>Hai visto il film Dune? Quello del 2021.</div>
                 </div>

@@ -99,7 +99,7 @@ export default function Crystal() {
   return (
       <>
         <div className='chat-section'>
-            <Topbar image={user4} />
+            <Topbar image={user4} name="Crystal" />
                 <div className='section'>
                     <div className='message'>Ma perchè hanno aumentato il prezzo di Netflix?</div>
                 </div>

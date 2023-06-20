@@ -99,7 +99,7 @@ export default function Luigi() {
   return (
       <>
         <div className='chat-section'>
-            <Topbar image={user6}/>
+            <Topbar image={user6} name="Luigi" />
                 <div className='section'>
                     <div className='message'>Vieni con me in Portogallo a Novembre?</div>
                 </div>

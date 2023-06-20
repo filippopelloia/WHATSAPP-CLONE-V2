@@ -99,7 +99,7 @@ export default function Giada() {
   return (
       <>
         <div className='chat-section'>
-            <Topbar image={user1}/>
+            <Topbar image={user1} name="Giada" />
                 <div className='section'>
                     <div className='message'>Ciao Filippo, sei in zona Treviso per caso?</div>
                 </div>

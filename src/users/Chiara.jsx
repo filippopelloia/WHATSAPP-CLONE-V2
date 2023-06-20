@@ -100,7 +100,7 @@ export default function Chiara() {
   return (
       <>
         <div className='chat-section'>
-            <Topbar image={user9}/>
+            <Topbar image={user9} name="Chiara" />
                 <div className='section'>
                     <div className='message'>La Giulia mi ha scritto...</div>
                 </div>

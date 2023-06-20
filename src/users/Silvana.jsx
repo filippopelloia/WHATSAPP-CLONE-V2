@@ -99,7 +99,7 @@ export default function Silvana() {
   return (
       <>
         <div className='chat-section'>
-            <Topbar image={user3}/>
+            <Topbar image={user3} name="Silvana" />
                 <div className='section'>
                     <div className='message'>Mi sa che non ci vedremo domani...</div>
                 </div>
