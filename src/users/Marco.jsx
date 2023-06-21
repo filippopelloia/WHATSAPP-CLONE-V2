@@ -70,7 +70,7 @@ export default function Marco() {
       useEffect(() => {
     
         const showChat = chat.map(item => {
-        const messageClass = item.id === 1 ||  item.id === 3 ? 'section' : 'section right-side';
+          const messageClass = (mode ? (item.id === 1 ||  item.id === 3 ? 'section' : 'section right-side dark') : (item.id === 1 ||  item.id === 3 ? 'section' : 'section right-side'));
     
         return  <>          
                       {/* SE E' UGUALE A ZERO O E' PARI */}
