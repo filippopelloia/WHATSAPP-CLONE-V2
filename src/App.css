@@ -143,6 +143,8 @@ svg{
   border-radius: 7.5px;
 }
 
+
+
 .right-side{
   display: flex;
   justify-content: end;
@@ -154,6 +156,7 @@ svg{
 
 .dark > div{
   background-color: #005C4B!important;
+  color: #E5F0EC;
 }
 
 .whatsapp{

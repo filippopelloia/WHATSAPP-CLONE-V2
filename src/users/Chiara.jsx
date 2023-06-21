@@ -91,7 +91,7 @@ export default function Chiara() {
                         <div key={nanoid()} 
                             id={item.id} 
                             style={darkText()}
-                            className='message'>
+                            className='message'> 
                               {item?.risposta || item?.testo}
                         </div>
                       </div>}
@@ -115,9 +115,8 @@ export default function Chiara() {
         <div className={mode ? 'chat-section dark-back' : 'chat-section light-back'}>
 
             <Topbar image={user9} name="Chiara" />
-                <div className='section'>
                     <div className='message' style={darkText()}>La Giulia mi ha scritto...</div>
-                </div>
+                {/* </div> */}
 
 
               {showCardMessages}
