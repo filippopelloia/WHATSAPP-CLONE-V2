@@ -13,5 +13,8 @@ Functionality:
 
 ***
 
-![preview](https://github.com/filippopelloia/SPACE-X-TO-DO-LIST/assets/116798172/797866b0-e6cf-4e80-8f61-52795e5c1487)
+![preview](https://github.com/filippopelloia/WHATSAPP-CLONE-V2/assets/116798172/c84c8fe7-e772-40af-8f4e-c22a9098fe7d)
+![preview dark](https://github.com/filippopelloia/WHATSAPP-CLONE-V2/assets/116798172/9eab4731-0d77-4922-a12a-b29f41c87ec2)
+
+
 
