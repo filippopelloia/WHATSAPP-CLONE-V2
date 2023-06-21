@@ -14,10 +14,13 @@ Functionality:
 ***
 
 Light Mode:
+
 ![preview](https://github.com/filippopelloia/WHATSAPP-CLONE-V2/assets/116798172/5b1b38bd-e3b7-4aa2-b85e-c8dcaec46cc5)
 
+***
 
 Dark Mode:
+
 ![preview dark](https://github.com/filippopelloia/WHATSAPP-CLONE-V2/assets/116798172/9eab4731-0d77-4922-a12a-b29f41c87ec2)
 
 
