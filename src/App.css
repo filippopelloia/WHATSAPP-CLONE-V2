@@ -144,13 +144,16 @@ svg{
 }
 
 .right-side{
-
   display: flex;
   justify-content: end;
 }
 
 .right-side > div{
   background-color: #D8FDD4!important;
+}
+
+.dark > div{
+  background-color: #005C4B!important;
 }
 
 .whatsapp{

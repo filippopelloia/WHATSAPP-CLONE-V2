@@ -33,6 +33,14 @@ export default function Chiara() {
     
       //test
       const [box, setBox] = useState([]);
+
+
+
+      // const yourMessages = () => {
+      //   return {
+      //     backgroundColor: mode ? '#005C4B' : '#D8FDD4'
+      //   }
+      // }
     
     
     
@@ -72,21 +80,21 @@ export default function Chiara() {
       useEffect(() => {
     
         const showChat = chat.map(item => {
-        const messageClass = item.id === 1 ||  item.id === 3 ? 'section' : 'section right-side';
+        const messageClass = (mode ? (item.id === 1 ||  item.id === 3 ? 'section' : 'section right-side dark') : (item.id === 1 ||  item.id === 3 ? 'section' : 'section right-side'));
     
         return  <>          
                       {/* SE E' UGUALE A ZERO O E' PARI */}
                       {(item.id % 2 === 0 && item.testo === '') ? 
                       '' 
                       : 
-                      <div className={messageClass}>
-                      <div key={nanoid()} 
+                      <div className={messageClass} >
+                        <div key={nanoid()} 
                             id={item.id} 
                             style={darkText()}
                             className='message'>
                               {item?.risposta || item?.testo}
                         </div>
-                    </div>}
+                      </div>}
                </>
       })
     

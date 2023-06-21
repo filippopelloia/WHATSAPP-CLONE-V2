@@ -18,6 +18,14 @@ export default function Bottombar(props) {
     setEmojiWindow(prevEmojiWindow => !prevEmojiWindow)
   }
 
+
+  const darkModeInput = () => {
+    return {
+      backgroundColor: mode ? '#1F2C34' : '#F1F2F6',
+      color: mode ? 'rgb(229, 240, 236)' : 'fff'
+    }
+  }
+
   return (
     <>
       {emojiWindow && (
@@ -34,7 +42,7 @@ export default function Bottombar(props) {
 
         <AttachFileIcon/>
           <input type="text"
-                 style={{backgroundColor: mode ? '#1F2C34' : '#F1F2F6'}}
+                 style={darkModeInput()}
                  value={props.text}
                  className='input-text'
                  placeholder='Type a message...'
