@@ -1,4 +1,4 @@
-### This is a simple WhatsApp-clone app
+### This is a simple WhatsApp-clone app made with React.js
 
 Functionality:
 1. Write and save messages.
